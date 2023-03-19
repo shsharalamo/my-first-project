@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+            @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+            
+            * {
+                direction: rtl;
+                line-height: 50px;
+                font-family: 'Varela Round', sans-serif;
+            }
+    
+            #main_div {
+                background-color: rgb(202, 66, 255);
+                height:100%;
+                width: 100%;
+            }
+    
+            #form {
+                border: 3px solid rgb(78, 78, 78);
+                border-radius: 30px;
+                margin: 5% 25% 5% 25%;
+                padding: 5%;
+                padding-top: 0px;
+            }
+    
+            br {
+                display: block;
+                margin: 2px;
+            }
+    
+            .labels {
+                display: inline-block;
+                margin-left: 10px;
+                color: #5a5c00;
+                min-width: 120px;
+                font-size: 1.5em;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+    
+            .inputs {
+                width: 60%;
+                border: 3px solid rgb(78, 78, 78);
+                margin: 10px;
+                padding-right: 20px;
+                border-radius: 20px;
+            }
+    
+    
+            #submit_button{
+                width: 100%;
+            }
+    
+            #color_input{
+                width: 20%;
+                border: none;
+                margin: 0 20px 0 0;
+            }
+    
+    
+    
+    
+            </style>
+
+    </head>
+    <body>
+
+        <form action="/article" target="_blank" id = "form" method="post">
+            <h1>נא להעלות את הכתבה במהירות אחרת נדפיס את העיתון בלעדייך</h1>
+
+            <label id = "label1" class = "labels" >שם הכתב.ת:</label>
+            <input class = "inputs" type="text" name="author" placeholder = "כאן...">
+            <br><br>
+
+
+
+            <label id = "label1" class = "labels" >כותרת הכתבה:</label>
+            <input class = "inputs" type="text" name="koteret" placeholder = "כאן...">
+            <br><br>
+
+
+            <label id = "label2" class = "labels">תאריך העלאה:</label>
+            <input class = "inputs" type="date" name="uploadDate" placeholder = "כאן...">
+            <br><br>
+
+            <label id = "label3" class = "labels">הקלד את כתבתך כאן:</label>
+            <textarea id = "color_input" class = "inputs" type="text" name="article" placeholder = "כאן...">
+            </textarea>
+                <br><br>
+
+            <label id = "label4" class = "labels">קטגוריה:</label>
+            <select class="inputs" name="category">
+                <option value="movies">movies</option>
+                <option value="video games">video_games</option>
+                <option value="politics">Politics</option>
+                <option value="sport">sport</option>
+            </select>
+            <br><br>
+
+            <label id = "label4" class = "labels">תמונה:</label>
+            <input class="inputs" type="text" name="picture">
+            <br><br>
+
+            <input id = "submit_button" type="submit" value="שלח">
+
+
+        </form>
+
+        <%- include('./footer.ejs') %>
+
+        <script>
+            
+        </script>
+    </body>
+</html>
